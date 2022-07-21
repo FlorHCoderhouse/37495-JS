@@ -1,13 +1,14 @@
 //Clase para los objetos libro
 class Libro {
 
-    constructor(titulo, autor, anio, genero, valoracion, id) {
+    constructor(titulo, autor, anio, genero, valoracion, id,cover) {
         this.titulo = titulo;
         this.autor = autor;
         this.anio = anio;
         this.genero = genero;
         this.valoracion = valoracion;
         this.id = id;
+        this.cover = cover;
     }
 
     asignarId(array) {
@@ -17,21 +18,24 @@ class Libro {
     valorar(valoracion) {
         this.valoracion = valoracion;
     }
+
+    asignarCover(cover){
+        this.cover=cover;
+    }
 }
 
 //Nuestro array de libros hardcodeado. Algo así como nuestra mock database 
 const libros = [
-    new Libro('American Gods', 'Neil Gaiman', 2001, 'Fantasía', 6, 1),
-    new Libro('Némesis', 'Agatha Christie', 1971, 'Misterio', 8, 2),
-    new Libro('Los elefantes pueden recordar', 'Agatha Christie', 1972, 'Misterio', 7, 3),
-    new Libro('David Copperfield', 'Charles Dickens', 1950, 'Novela', 8, 4),
-    new Libro('Narciso y Golmundo', 'Hermann Hesse', 1930, 'Novela', 9, 5),
-    new Libro('Los Borgia', 'Mario Puzo', 2001, 'Novela histórica', 9, 6),
-    new Libro('El Hobbit', 'J.R.R. Tolkien', 1937, 'Novela fantástica', 10, 7)
+    new Libro('American Gods', 'Neil Gaiman', 2001, 'Fantasía', 6, 1,'./img/american-gods.jpg'),
+    new Libro('Némesis', 'Agatha Christie', 1971, 'Misterio', 8, 2,'./img/nemess.jpg'),
+    new Libro('Los elefantes pueden recordar', 'Agatha Christie', 1972, 'Misterio', 7, 3,'./img/los-elefantes-pueden-recordar.jpg'),
+    new Libro('David Copperfield', 'Charles Dickens', 1950, 'Novela', 8, 4,'./img/david-copperfield.jpg'),
+    new Libro('Narciso y Golmundo', 'Hermann Hesse', 1930, 'Novela', 9, 5,'./img/narciso-y-golmundo.jpg'),
+    new Libro('Los Borgia', 'Mario Puzo', 2001, 'Novela histórica', 9, 6,'./img/los-borgia.jpg'),
+    new Libro('El Hobbit', 'J.R.R. Tolkien', 1937, 'Novela fantástica', 10, 7,'./img/el-hobbit.jpg')
 ]
 
 //console.log(libros);
-
 
 
 //--------------------------Pedir que se ingresen libros nuevos y sumarlos al array-----------------------------//
