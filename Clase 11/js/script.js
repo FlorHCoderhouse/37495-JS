@@ -93,11 +93,13 @@ function guardarPFenStorage(pf) {
 
 function recuperarPFDeStorage(pf) {
     let plazoFijo = JSON.parse(localStorage.getItem(pf));
-    if (plazoFijo == null) {
+/*     if (plazoFijo == null) {
         return false;
     } else {
         return plazoFijo;
-    }
+    } */
+
+    plazoFijo==null ? false : plazoFijo;
 }
 
 function calcularIntereses(pf, tasaPesos, tasaDolares) {
