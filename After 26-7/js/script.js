@@ -107,7 +107,7 @@ function mostrarInfoMascota(array) {
     });
 }
 
-//esta función nos permite intercambiar la visualizaión de los elementos del DOM, agregando o sacando la clase d-none. Si el elemento la tiene, se la saco, y si no la tiene, se la agrego. La gata Flora de las funciones sería.
+//esta función nos permite intercambiar la visualización de los elementos del DOM, agregando o sacando la clase d-none. Si el elemento la tiene, se la saco, y si no la tiene, se la agrego. La gata Flora de las funciones sería.
 function presentarInfo(array, clase) {
     array.forEach(element => {
         element.classList.toggle(clase);
